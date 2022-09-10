@@ -13,7 +13,7 @@ export class NormalFormComponent implements OnInit {
 
   // Normal template driven form
   comments: string;
-  Submit(StdForm: NgForm) {
-    console.log(this.comments);
-  }
+  // Submit(StdForm: NgForm) {
+  //   console.log(this.comments);
+  // }
 }
