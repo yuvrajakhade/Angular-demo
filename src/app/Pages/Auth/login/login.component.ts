@@ -9,12 +9,19 @@ import { Router } from '@angular/router';
 export class LoginComponent implements OnInit {
   temp: any;
   obj = new Greeter();
+
   constructor(private router: Router) {
-    this.temp = this.obj.greet('Yuvraj');
+    this.temp = this.obj.greet('there');
   }
+
   ngOnInit(): void {}
-  login() {
-    this.router.navigate(['/home']);
+
+  reactiveForm() {
+    this.router.navigate(['/Reactive-Form']);
+  }
+
+  normalForm() {
+    this.router.navigate(['/Normal-Form']);
   }
 }
 

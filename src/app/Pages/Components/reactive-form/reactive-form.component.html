@@ -1,0 +1,49 @@
+<h1> Reactive Form</h1>
+<form [formGroup]="studentForm" (ngSubmit)="onSubmit()">
+  <div>
+    <label>
+      Name:
+      <input formControlName="name" placeholder="Your Name">
+    </label>
+  </div>
+  <div>
+    <label>
+      Message:
+      <input formControlName="message" placeholder="Your Message">
+    </label>
+  </div>
+
+  <div formGroupName="address">
+    <div>
+      <label>
+        City:
+        <input formControlName="city" placeholder="Your City">
+      </label>
+    </div>
+
+    <div>
+      <label>
+        State:
+        <input formControlName="state" placeholder="Your State">
+      </label>
+    </div>
+  </div>
+
+  <div>
+    <label>
+      Comments:
+      <input formControlName="comments" placeholder="Your Comment">
+    </label>
+  </div>
+
+  <button type="submit" [disabled]="studentForm.invalid">Submit</button>
+</form>
+
+<div *ngIf="submitted">
+  <hr>
+  <p>Name:{{student.name}}</p>
+  <p>Message:{{student.message}}</p>
+  <p>City:{{student.address.city}}</p>
+  <p>State:{{student.address.state}}</p>
+  <p>Comments:{{student.comments}}</p>
+</div>
