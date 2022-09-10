@@ -7,8 +7,9 @@ import { MaterialModule } from './material/material.module';
 import { LoginComponent } from './Pages/Auth/login/login.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
-import { ReactiveFormComponent } from './Pages/Components/reactive-form/reactive-form.component';
-import { NormalFormComponent } from './Pages/Components/normal-form/normal-form.component';
+import { ReactiveFormComponent } from './Components/reactive-form/reactive-form.component';
+import { NormalFormComponent } from './Components/normal-form/normal-form.component';
+import { SidenavComponent } from './Pages/Dashboard/sidenav/sidenav.component';
 
 @NgModule({
   declarations: [
@@ -16,14 +17,15 @@ import { NormalFormComponent } from './Pages/Components/normal-form/normal-form.
     LoginComponent,
     ReactiveFormComponent,
     NormalFormComponent,
+    SidenavComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    MaterialModule,
     FormsModule,
     ReactiveFormsModule,
+    BrowserAnimationsModule,
+    MaterialModule,
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

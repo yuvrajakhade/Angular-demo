@@ -1,0 +1,126 @@
+  <mat-sidenav-container fullscreen>
+    <mat-sidenav #sidenav [(opened)]="opened" mode="side">
+      <div class="list background">
+        <img src="assets/0001.png" style="width: 100%;margin-bottom: 10%;">
+      </div>
+      <mat-list>
+        <mat-list-item id="sidenav-item" routerLink="/sidenav" (click)="CloseOnClick()"
+          [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active-list-item">
+          <mat-icon>add_box</mat-icon><span style="padding: 0px 10px"></span> <span id="sidnav-menu">Production
+            Form</span>
+        </mat-list-item>
+
+        <mat-list-item id="sidenav-item" routerLink="/sidenav/payroll" (click)="CloseOnClick()"
+          routerLinkActive="active-list-item">
+          <mat-icon>local_atm</mat-icon><span style="padding: 0px 10px"></span><span id="sidnav-menu">Production
+            Table</span>
+        </mat-list-item>
+
+        <mat-list-item *ngIf="admin" id="sidenav-item" routerLink="/sidenav/crumb" (click)="CloseOnClick()"
+          routerLinkActive="active-list-item">
+          <mat-icon>landscape</mat-icon><span style="padding: 0px 10px"></span><span id="sidnav-menu">Crumb</span>
+        </mat-list-item>
+
+        <mat-list-item *ngIf="admin" id="sidenav-item" routerLink="/sidenav/soution" (click)="CloseOnClick()"
+          routerLinkActive="active-list-item">
+          <mat-icon>local_drink</mat-icon><span style="padding: 0px 10px"></span><span id="sidnav-menu">Solution
+            B</span>
+        </mat-list-item>
+
+        <mat-list-item *ngIf="admin" id="sidenav-item" routerLink="/sidenav/moulder" (click)="CloseOnClick()"
+          routerLinkActive="active-list-item">
+          <mat-icon>waves
+          </mat-icon><span style="padding: 0px 10px"></span><span id="sidnav-menu">Mould
+            R</span>
+        </mat-list-item>
+
+        <mat-list-item *ngIf="admin" id="sidenav-item" routerLink="/sidenav/color/colorname" (click)="OpenOnClick()"
+          routerLinkActive="active-list-item">
+          <mat-icon>color_lens</mat-icon><span style="padding: 0px 10px"></span><span id="sidnav-menu">Color
+            Master</span>
+          <mat-icon *ngIf="!coloractive" style="padding-left:10px" class="ml-auto"> keyboard_arrow_down
+          </mat-icon>
+          <mat-icon *ngIf="coloractive" style="padding-left:10px" class="ml-auto"> keyboard_arrow_up
+          </mat-icon>
+        </mat-list-item>
+
+
+        <mat-list-item *ngIf=show id="sidenav-item" routerLink="/sidenav/color/colorname"
+          routerLinkActive="active-list-item">
+          <mat-icon>brush</mat-icon><span style="padding: 0px 10px"></span><span id="sidnav-menu">Color
+            Name</span>
+        </mat-list-item>
+
+        <mat-list-item *ngIf=show id="sidenav-item" routerLink="/sidenav/color/colorcode"
+          routerLinkActive="active-list-item">
+          <mat-icon>brush</mat-icon><span style="padding: 0px 10px"></span><span id="sidnav-menu">Color
+            Code</span>
+        </mat-list-item>
+
+        <mat-list-item *ngIf="admin" id="sidenav-item" routerLink="/sidenav/thickness" (click)="CloseOnClick()"
+          routerLinkActive="active-list-item">
+          <mat-icon>line_weight</mat-icon><span style="padding: 0px 10px"></span><span id="sidnav-menu">Thickness</span>
+        </mat-list-item>
+
+        <mat-list-item *ngIf="admin" id="sidenav-item" routerLink="/sidenav/electricity" (click)="CloseOnClick()"
+          routerLinkActive="active-list-item">
+          <mat-icon>show_chart</mat-icon><span style="padding: 0px 10px"></span><span
+            id="sidnav-menu">Electricity</span>
+        </mat-list-item>
+
+        <mat-list-item *ngIf="admin" id="sidenav-item" routerLink="/sidenav/rent" (click)="CloseOnClick()"
+          routerLinkActive="active-list-item">
+          <mat-icon>monetization_on</mat-icon><span style="padding: 0px 10px"></span><span id="sidnav-menu">Rent</span>
+        </mat-list-item>
+
+        <mat-list-item *ngIf="admin" id="sidenav-item" routerLink="/sidenav/userForm" (click)="CloseOnClick()"
+          routerLinkActive="active-list-item">
+          <mat-icon>format_list_numbered</mat-icon><span style="padding: 0px 10px"></span><span id="sidnav-menu">User
+            Form</span>
+        </mat-list-item>
+
+        <mat-list-item *ngIf="admin" id="sidenav-item" routerLink="/sidenav/userTable" (click)="CloseOnClick()"
+          routerLinkActive="active-list-item">
+          <mat-icon>table_chart</mat-icon><span style="padding: 0px 10px"></span><span id="sidnav-menu">User
+            Table</span>
+        </mat-list-item>
+
+      </mat-list>
+    </mat-sidenav>
+
+
+    <mat-sidenav-content>
+      <mat-toolbar>
+        <button mat-icon-button (click)="opened=!opened">
+
+          <div *ngIf="!opened" class="menu_icon1">
+            <mat-icon id="dash-icon">menu_open</mat-icon>
+          </div>
+          <div *ngIf="opened" class="menu_icon">
+            <mat-icon id="dash-icon">menu_open</mat-icon>
+          </div>
+
+        </button>
+
+        <div class="ml-auto user-name" style="font-size: 1.1vw;text-transform:uppercase;"> WELCOME
+          {{Name}}
+        </div>
+
+        <div class="ml-auto user-name" style="font-size: 1.1vw;position: absolute;
+        right: 2%;">
+          <button mat-icon-button (click)="logout()">
+            <mat-icon style="margin-top: -15%">settings_power</mat-icon>
+          </button></div>
+
+      </mat-toolbar>
+
+      <div class="main-content">
+
+        <router-outlet></router-outlet>
+
+      </div>
+
+
+    </mat-sidenav-content>
+
+  </mat-sidenav-container>

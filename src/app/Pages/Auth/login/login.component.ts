@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Route, Router } from '@angular/router';
+import swal from 'sweetalert';
 
 @Component({
   selector: 'app-login',
@@ -7,26 +9,32 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent implements OnInit {
-  temp: any;
-  obj = new Greeter();
+  loginForm: FormGroup | any;
 
   constructor(private router: Router) {
-    this.temp = this.obj.greet('there');
+    this.loginForm = new FormGroup({
+      email: new FormControl('', [
+        Validators.required,
+        Validators.email,
+        Validators.pattern('[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,63}$'),
+      ]),
+      password: new FormControl('', [
+        Validators.required,
+        Validators.pattern(
+          '^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,12}$'
+        ),
+      ]),
+    });
   }
 
   ngOnInit(): void {}
 
-  reactiveForm() {
-    this.router.navigate(['/Reactive-Form']);
-  }
-
-  normalForm() {
-    this.router.navigate(['/Normal-Form']);
-  }
-}
-
-export class Greeter {
-  greet(name: string) {
-    return 'Hello ' + name + '!';
+  onSubmit() {
+    if (!this.loginForm.valid) {
+      return;
+    }
+    localStorage.setItem('user', this.loginForm.value);
+    swal('Login successfully!');
+    this.router.navigate(['dashbaord']);
   }
 }

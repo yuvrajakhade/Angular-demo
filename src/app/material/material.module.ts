@@ -13,6 +13,9 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatListModule } from '@angular/material/list';
+
 @NgModule({
   declarations: [],
   imports: [
@@ -30,6 +33,8 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     MatProgressBarModule,
     MatDatepickerModule,
     MatPaginatorModule,
+    MatSidenavModule,
+    MatListModule,
   ],
   exports: [
     CommonModule,
@@ -46,6 +51,8 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     MatProgressBarModule,
     MatDatepickerModule,
     MatPaginatorModule,
+    MatSidenavModule,
+    MatListModule,
   ],
 })
 export class MaterialModule {}
