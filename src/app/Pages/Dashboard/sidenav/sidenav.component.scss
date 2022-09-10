@@ -20,12 +20,12 @@ mat-list-item:hover {
 }
 
 mat-toolbar {
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: coral;
   color: white;
 }
 
 mat-sidenav {
-  background-color: rgba(0, 0, 0, 0.4) !important;
+  background-color: coral !important;
   width: 18% !important;
   color: white;
 }
@@ -70,7 +70,7 @@ mat-sidenav {
 
 @media only screen and (max-width: 600px) {
   mat-sidenav {
-    background-color: rgba(0, 0, 0, 0.4) !important;
+    background-color: coral !important;
     width: 23% !important;
   }
   .mat-list-base,

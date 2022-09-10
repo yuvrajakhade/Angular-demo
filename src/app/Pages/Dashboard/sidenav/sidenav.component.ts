@@ -11,7 +11,7 @@ export class SidenavComponent implements OnInit {
   number: number;
   show: boolean = false;
   coloractive: boolean = false;
-  opened: any;
+  opened: any = true;
   role: any;
   admin: boolean;
   constructor(private router: Router) {

@@ -8,10 +8,14 @@ import { SidenavComponent } from './Pages/Dashboard/sidenav/sidenav.component';
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'login' },
   { path: 'login', component: LoginComponent },
-  { path: 'dashbaord', component: SidenavComponent },
-
-  { path: 'Reactive-Form', component: ReactiveFormComponent },
-  { path: 'Normal-Form', component: NormalFormComponent },
+  {
+    path: 'dashbaord',
+    component: SidenavComponent,
+    children: [
+      { path: '', component: ReactiveFormComponent },
+      { path: 'Normal-Form', component: NormalFormComponent },
+    ],
+  },
 ];
 
 @NgModule({
