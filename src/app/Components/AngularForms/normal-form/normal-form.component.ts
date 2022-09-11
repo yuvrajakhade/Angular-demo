@@ -9,11 +9,17 @@ import { NgForm } from '@angular/forms';
 export class NormalFormComponent implements OnInit {
   constructor() {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.comments = 'Pravin';
+  }
 
   // Normal template driven form
   comments: string;
   // Submit(StdForm: NgForm) {
   //   console.log(this.comments);
   // }
+
+  add() {
+    console.log(this.comments);
+  }
 }

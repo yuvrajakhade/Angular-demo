@@ -7,9 +7,10 @@ import { MaterialModule } from './material/material.module';
 import { LoginComponent } from './Pages/Auth/login/login.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
-import { ReactiveFormComponent } from './Components/reactive-form/reactive-form.component';
-import { NormalFormComponent } from './Components/normal-form/normal-form.component';
+import { ReactiveFormComponent } from './Components/AngularForms/reactive-form/reactive-form.component';
+import { NormalFormComponent } from './Components/AngularForms/normal-form/normal-form.component';
 import { SidenavComponent } from './Pages/Dashboard/sidenav/sidenav.component';
+import { LazyloadComponent } from './Components/LazyLoading/lazyload/lazyload.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { SidenavComponent } from './Pages/Dashboard/sidenav/sidenav.component';
     ReactiveFormComponent,
     NormalFormComponent,
     SidenavComponent,
+    LazyloadComponent,
   ],
   imports: [
     BrowserModule,
