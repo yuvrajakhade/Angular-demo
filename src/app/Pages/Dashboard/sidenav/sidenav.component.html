@@ -4,6 +4,12 @@
         <img src="assets/0001.png" style="width: 100%;margin-bottom: 10%;">
       </div>
       <mat-list>
+
+        <mat-list-item id="sidenav-item" routerLink="/dashbaord/directives" (click)="CloseOnClick()"
+          [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active-list-item">
+          <mat-icon>add_box</mat-icon><span style="padding: 0px 10px"></span> <span id="sidnav-menu">Directives</span>
+        </mat-list-item>
+
         <mat-list-item id="sidenav-item" routerLink="/sidenav" (click)="CloseOnClick()"
           [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active-list-item">
           <mat-icon>add_box</mat-icon><span style="padding: 0px 10px"></span> <span id="sidnav-menu">Production

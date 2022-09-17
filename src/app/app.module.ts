@@ -11,6 +11,7 @@ import { ReactiveFormComponent } from './Components/AngularForms/reactive-form/r
 import { NormalFormComponent } from './Components/AngularForms/normal-form/normal-form.component';
 import { SidenavComponent } from './Pages/Dashboard/sidenav/sidenav.component';
 import { LazyloadComponent } from './Components/LazyLoading/lazyload/lazyload.component';
+import { DirectivesComponent } from './Components/directives/directives.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { LazyloadComponent } from './Components/LazyLoading/lazyload/lazyload.co
     NormalFormComponent,
     SidenavComponent,
     LazyloadComponent,
+    DirectivesComponent,
   ],
   imports: [
     BrowserModule,

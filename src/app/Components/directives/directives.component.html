@@ -1,0 +1,39 @@
+<h1 style="display:flex; justify-content:center">Types of Directives</h1>
+
+<h3>Structural directives </h3>
+<div>
+  <ul *ngFor="let stud of StudentData">
+    <li (click)="onClick(stud)"
+      [ngStyle]="{'color':getColor(stud.roleno),'background-color':stud.roleno == role_no ?'lightgray':'white'}">
+      {{stud.name}}
+    </li>
+
+  </ul>
+  <button mat-stroked-button color="primary" (click)="onClear()">clear</button>
+</div>
+
+<br>
+<br>
+
+<h3>Attribute directives </h3>
+
+<div>
+  <ul *ngFor="let stud of StudentData">
+    <li (click)="onClick(stud)" [ngClass]="['text-uppercase',stud.roleno == role_no ?'text-danger':'text-success']">
+      {{stud.name}}
+    </li>
+
+  </ul>
+  <button mat-stroked-button color="primary" (click)="onClear()">clear</button>
+</div>
+
+<div>
+  <h2 *ngIf="selected">Student Role No - {{role_no}}</h2>
+  <h2 *ngIf="selected">Student Class - {{class}}</h2>
+</div>
+
+
+
+
+
+<!-- <p>Custom directives</p> -->
