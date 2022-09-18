@@ -1,5 +1,34 @@
 <h1 style="display:flex; justify-content:center">Types of Directives</h1>
 
+
+<h3>Pipe</h3>
+
+<p>{{dateTime | dateTransform:'YYYY-MM-DD'}}</p>
+<p>{{dateTime | dateTransform:'YYYY/MM/DD'}}</p>
+<p>{{ dateTime1 | dateTransform:'M/DD/YYYY'}}</p>
+<!-- HH 24hours  hh 12 hours -->
+<p>{{dateTime1 | dateTransform:'MMM ddd,y, HH:mm:ss a'}}</p>
+
+
+
+<br>
+<br>
+<hr>
+
+<h3>Custom directives</h3>
+
+<h6 appAttributeDirective>Custom Attribute Directive</h6>
+
+<h6 *appStructural="false">Custom Structural Directive(True)</h6>
+<h6 *appStructural="true">Custom Structural Directive(False)</h6>
+
+
+<br>
+<br>
+<hr>
+
+
+
 <h3>Structural directives </h3>
 <div>
   <ul *ngFor="let stud of StudentData">
@@ -12,8 +41,14 @@
   <button mat-stroked-button color="primary" (click)="onClear()">clear</button>
 </div>
 
+
+
+
 <br>
 <br>
+<hr>
+
+
 
 <h3>Attribute directives </h3>
 
@@ -31,9 +66,3 @@
   <h2 *ngIf="selected">Student Role No - {{role_no}}</h2>
   <h2 *ngIf="selected">Student Class - {{class}}</h2>
 </div>
-
-
-
-
-
-<!-- <p>Custom directives</p> -->

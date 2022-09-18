@@ -12,6 +12,9 @@ import { NormalFormComponent } from './Components/AngularForms/normal-form/norma
 import { SidenavComponent } from './Pages/Dashboard/sidenav/sidenav.component';
 import { LazyloadComponent } from './Components/LazyLoading/lazyload/lazyload.component';
 import { DirectivesComponent } from './Components/directives/directives.component';
+import { AttributeDirective } from './Components/customDirectives/attribute-directive.directive';
+import { StructuralDirective } from './Components/customDirectives/structural.directive';
+import { DateTransformPipe } from './Components/Pipe/date-transform.pipe';
 
 @NgModule({
   declarations: [
@@ -22,6 +25,9 @@ import { DirectivesComponent } from './Components/directives/directives.componen
     SidenavComponent,
     LazyloadComponent,
     DirectivesComponent,
+    AttributeDirective,
+    StructuralDirective,
+    DateTransformPipe,
   ],
   imports: [
     BrowserModule,

@@ -49,4 +49,8 @@ export class DirectivesComponent implements OnInit {
         return 'gray';
     }
   }
+
+  //PIPE
+  dateTime = new Date();
+  dateTime1 = '02/10/2021 13:11:22';
 }
