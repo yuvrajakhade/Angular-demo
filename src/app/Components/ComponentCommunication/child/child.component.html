@@ -1,0 +1,5 @@
+<h1>Child Count - {{count}}</h1>
+
+<mat-label for="item-input">Add an item:</mat-label>
+<input type="text" id="item-input" #newItem>
+<button mat-raised-button color="accent" (click)="addNewItem(newItem.value)">Add to parent's list</button>

@@ -15,6 +15,8 @@ import { DirectivesComponent } from './Components/directives/directives.componen
 import { AttributeDirective } from './Components/customDirectives/attribute-directive.directive';
 import { StructuralDirective } from './Components/customDirectives/structural.directive';
 import { DateTransformPipe } from './Components/Pipe/date-transform.pipe';
+import { ParentComponent } from './Components/ComponentCommunication/parent/parent.component';
+import { ChildComponent } from './Components/ComponentCommunication/child/child.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +30,8 @@ import { DateTransformPipe } from './Components/Pipe/date-transform.pipe';
     AttributeDirective,
     StructuralDirective,
     DateTransformPipe,
+    ParentComponent,
+    ChildComponent,
   ],
   imports: [
     BrowserModule,

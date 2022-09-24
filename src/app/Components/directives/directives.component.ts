@@ -52,5 +52,5 @@ export class DirectivesComponent implements OnInit {
 
   //PIPE
   dateTime = new Date();
-  dateTime1 = '02/10/2021 13:11:22';
+  dateTime1 = '12/01/2021 13:11:22';
 }

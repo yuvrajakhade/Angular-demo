@@ -1,0 +1,12 @@
+<button mat-raised-button color="primary" (click)="Increment()">Increment</button>
+&nbsp;
+<button mat-raised-button color="accent" (click)="Decrement()">Decrement</button>
+
+<ul>
+  <li *ngFor="let item of items">{{item}}</li>
+</ul>
+<hr>
+
+<!-- [count]="intitalCount"  used for pass data form parent to child-->
+<!-- (newItemEvent)="addItem($event)" used for taken data from child to parent -->
+<app-child [count]="intitalCount" (newItemEvent)="addItem($event)"></app-child>
